@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window title="MozREPL Panel"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        windowtype="mozrepl:panel"
+        id="mozrepl:panel"
+        onload="init();"
+        onunload="destroy();"
+        width="640" height="480"
+        screenX="" screenY=""
+        persist="width height screenX screenY">
+
+  <script type="application/javascript" src="replPanel.js"/>
+  
+  <vbox id="console" flex="1">
+    <hbox id="console-window-selector-container" align="center">
+	  <label value="TopWindow"/>
+	  <menulist id="console-window-menulist" flex="1" oncommand="onWindowSelected(this)" 
+				datasources="dummy" ref="." querytype="windowlist">
+		<template>
+		  <menupopup>
+			<menuitem uri="?" label="?title"/>
+		  </menupopup>
+		</template>
+	  </menulist>
+      <button label="Refresh" oncommand="onRefreshWindowList()"/>
+	</hbox>
+    <hbox id="console-output-container" flex="4" style="overflow: auto;">
+      <html:pre id="console-output" flex="4" style="overflow: auto; color:white; background-color: black;"/>
+    </hbox>
+    <hbox id="console-input-container" align="center">
+	  <label value="repl>"/>
+      <textbox id="console-input" type="autocomplete" value="ok" ontextentered="onTextInput(this);" flex="1"/>
+	</hbox>
+  </vbox>
+</window>
