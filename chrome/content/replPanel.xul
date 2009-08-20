@@ -31,7 +31,10 @@
     </hbox>
     <hbox id="console-input-container" align="center">
 	  <label value="repl>"/>
-      <textbox id="console-input" type="autocomplete" value="ok" ontextentered="onTextInput(this);" flex="1"/>
+      <textbox id="console-input" name="console-input" type="autocomplete" value="repl.whereAmI()" 
+			   autocompletesearch="form-history" onkeypress="if(event.which == 13) { addHistoryEntry(); }"
+			   autocompletesearchparam="repl-console-input"
+			   enablehistory="true" ontextentered="onTextInput(this);" flex="1"/>
 	</hbox>
   </vbox>
 </window>

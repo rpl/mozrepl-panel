@@ -48,3 +48,9 @@ function onRefreshWindowList() {
 function destroy() {
   REPL.closeSession(session);
 }
+
+function addHistoryEntry(){
+  var fhService = Components.classes["@mozilla.org/satchel/form-history;1"].
+                  getService(Components.interfaces.nsIFormHistory2);
+  fhService.addEntry("repl-console-input", document.getElementById("console-input").value);
+}
