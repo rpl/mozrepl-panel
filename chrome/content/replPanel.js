@@ -9,7 +9,6 @@ function init() {
 }
 
 function initREPLSession() {
-  alert(session_windowlist_index + ": " + REPL.getWindowByIndex(session_windowlist_index));
   session = REPL.initSession({
 	targetWindow: REPL.getWindowByIndex(session_windowlist_index),
 	onOutput: onREPLOutput,
@@ -24,7 +23,7 @@ function onREPLOutput(string) {
 }
 
 function onREPLQuit() {
-  alert("REPL session quit");
+  session.onOutput("\n\nSESSION QUIT\n\n");
 }
 
 function onTextInput(target) {
@@ -47,5 +46,5 @@ function onRefreshWindowList() {
 }
 
 function destroy() {
-  alert("REPL DESTROYED");
+  REPL.closeSession(session);
 }
