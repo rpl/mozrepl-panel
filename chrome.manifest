@@ -1,5 +1,5 @@
-content mozrepl-panel chrome/content/
-skin mozrepl classic/1.0 chrome/skin/classic/
+content mozrepl-panel chrome/content/ 
+skin mozrepl-panel classic/1.0 chrome/skin/classic/
 resource mozrepl-panel ./
 overlay chrome://browser/content/browser.xul         chrome://mozrepl-panel/content/overlay_browser.xul
 overlay chrome://messenger/content/messenger.xul     chrome://mozrepl-panel/content/overlay_mail.xul

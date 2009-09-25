@@ -29,6 +29,7 @@ function onREPLQuit() {
 function onTextInput(target) {
   if(target) {
     session.onOutput(target.value+"\n");
+	addHistoryEntry(target.value);
     session.receive(target.value);
   }
 }
@@ -49,8 +50,8 @@ function destroy() {
   REPL.closeSession(session);
 }
 
-function addHistoryEntry(){
+function addHistoryEntry(text){
   var fhService = Components.classes["@mozilla.org/satchel/form-history;1"].
                   getService(Components.interfaces.nsIFormHistory2);
-  fhService.addEntry("repl-console-input", document.getElementById("console-input").value);
+  fhService.addEntry("repl-console-input", text);
 }
