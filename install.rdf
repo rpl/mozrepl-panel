@@ -20,6 +20,18 @@
         <em:maxVersion>1.9.*</em:maxVersion>
       </Description>
     </em:targetApplication>
+
+    <em:requires>
+      <Description>
+	<em:id>mozrepl@hyperstruct.net</em:id>
+	<em:name>MozRepl</em:name>
+	<em:homepageURL>http://wiki.github.com/bard/mozrepl/home</em:homepageURL>
+	<em:updateURL>http://repo.hyperstruct.net/mozrepl/devel/update.rdf</em:updateURL>
+	<em:minVersion>2009041717</em:minVersion>
+	<!--em:maxVersion>X</em:maxVersion-->
+      </Description>
+    </em:requires>
+
     <em:name>MozRepl Panel</em:name>
     <em:description>A XUL Panel interface to MozREPL interactive javascript shell</em:description>
     <em:creator>Luca Greco</em:creator>
