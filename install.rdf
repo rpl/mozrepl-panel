@@ -28,7 +28,7 @@
 	<em:homepageURL>http://wiki.github.com/bard/mozrepl/home</em:homepageURL>
 	<em:updateURL>http://repo.hyperstruct.net/mozrepl/devel/update.rdf</em:updateURL>
 	<em:minVersion>2009041717</em:minVersion>
-	<!--em:maxVersion>X</em:maxVersion-->
+	<em:maxVersion>2009041717</em:maxVersion>
       </Description>
     </em:requires>
 
