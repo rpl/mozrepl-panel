@@ -2,7 +2,7 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:id>mozrepl-panel@alcacoop.it</em:id>
-    <em:version>20090819</em:version>
+    <em:version>20090928</em:version>
     <em:type>2</em:type>
     <!-- firefox -->
     <em:targetApplication>
@@ -21,7 +21,7 @@
       </Description>
     </em:targetApplication>
 
-    <em:requires>
+    <!--em:requires>
       <Description>
 	<em:id>mozrepl@hyperstruct.net</em:id>
 	<em:name>MozRepl</em:name>
@@ -30,7 +30,7 @@
 	<em:minVersion>2009041717</em:minVersion>
 	<em:maxVersion>2009041717</em:maxVersion>
       </Description>
-    </em:requires>
+    </em:requires-->
 
     <em:name>MozRepl Panel</em:name>
     <em:description>A XUL Panel interface to MozREPL interactive javascript shell</em:description>
